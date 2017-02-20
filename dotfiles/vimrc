@@ -1,0 +1,55 @@
+"Cristian Frincu"
+
+set ignorecase "Ignore case when searching
+set smartcase "Except if we type an uppercase
+set incsearch "search characters as they are enterd"
+set hlsearch "Highligh search results
+
+set showmatch "Highlight matching brackets when text is over them 
+set mat=2 "Blink for X tenths of a second when over matching brackets
+
+"No sounds on errors
+set noerrorbells
+set novisualbell
+
+set showcmd "Show what letters are being pressed in the lower left corner"
+
+syntax enable
+"set background=light
+"colorscheme solarized "Set the theme 
+
+
+"Together relative + relative for hybrid
+set number "Show the line under the cursor
+set relativenumber "Show the line number relative to cursor"
+set cursorline "Highlights the current cursor line"
+hi CursorLine   cterm=NONE ctermbg=lightgray "Makes the current ne gray"
+set ruler  "Shows the current line and column of cursor"
+
+
+set so=10 "Have 10 lines under the cursor at all times when scrolling"
+
+"Meant to speed up vim"
+set nobackup
+set noswapfile
+
+set ai "Auto indent
+set si "smart indent
+set wrap "Wrap lines
+
+set laststatus=2
+
+" Return to last edit position when opening files (You want this!)
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+
+"Fix the delete key"
+set backspace=indent,eol,start
+
+"In order to move up/down as seen on the screen"
+nmap j gj
+nmap k gk
+
+"Spell check in English"
+setlocal spell
+
