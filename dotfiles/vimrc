@@ -15,15 +15,15 @@ set novisualbell
 set showcmd "Show what letters are being pressed in the lower left corner"
 
 syntax enable
-"set background=light
-"colorscheme solarized "Set the theme 
+set background=dark
+color desert "Set the theme 
 
 
 "Together relative + relative for hybrid
 set number "Show the line under the cursor
-set relativenumber "Show the line number relative to cursor"
+"set relativenumber "Show the line number relative to cursor"
 set cursorline "Highlights the current cursor line"
-hi CursorLine   cterm=NONE ctermbg=lightgray "Makes the current ne gray"
+"hi CursorLine   cterm=NONE ctermbg=lightgray "Makes the current ne gray"
 set ruler  "Shows the current line and column of cursor"
 
 
@@ -53,3 +53,19 @@ nmap k gk
 "Spell check in English"
 setlocal spell
 
+
+"Rules For python to comform to pep8"
+"set textwidth=79  " lines longer than 79 columns will be broken
+set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
+set tabstop=4     " a hard TAB displays as 4 columns
+set expandtab     " insert spaces when hitting TABs
+set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
+set shiftround    " round indent to multiple of 'shiftwidth'
+set autoindent    " align the new line indent with the previous line
+
+
+
+set undofile
+set undodir=/Users/Crisitan/.vimundo/
+
+set mouse=a "Works with iTerm, and clicking gives visual block, or hold ctr for visual line
